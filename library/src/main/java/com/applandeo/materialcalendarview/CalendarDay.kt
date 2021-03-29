@@ -14,7 +14,6 @@ class CalendarDay(val calendar: Calendar) {
 
     @DrawableRes
     var backgroundResource: Int? = null
-
     var backgroundDrawable: Drawable? = null
 
     @ColorRes
@@ -22,6 +21,6 @@ class CalendarDay(val calendar: Calendar) {
 
     @DrawableRes
     var selectedBackgroundResource: Int? = null
-
     var selectedBackgroundDrawable: Drawable? = null
+
 }

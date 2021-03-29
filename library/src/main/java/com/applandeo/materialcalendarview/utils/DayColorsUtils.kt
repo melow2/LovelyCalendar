@@ -3,6 +3,7 @@
 package com.applandeo.materialcalendarview.utils
 
 import android.content.Context
+import android.graphics.Color
 import android.graphics.Typeface
 import android.widget.TextView
 import androidx.annotation.ColorRes
@@ -148,12 +149,26 @@ private fun setNormalDayColors(calendar: Calendar, dayLabel: TextView, calendarP
     val calendarDayBackgroundDrawable = calendarDay?.backgroundDrawable
 
     if (calendarDayBackgroundRes != null) {
-        dayLabel.setDayColors(labelColor, backgroundRes = calendarDayBackgroundRes)
+        if(calendar.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY){
+            dayLabel.setDayColors(Color.parseColor("#d6222b"), backgroundRes = calendarDayBackgroundRes)
+        }else{
+            dayLabel.setDayColors(labelColor, backgroundRes = calendarDayBackgroundRes)
+        }
+
     } else if (calendarDayBackgroundDrawable != null) {
-        dayLabel.setDayColors(labelColor)
-        dayLabel.setBackgroundDrawable(calendarDayBackgroundDrawable)
+        if(calendar.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY){
+            dayLabel.setDayColors(Color.parseColor("#d6222b"))
+            dayLabel.setBackgroundDrawable(calendarDayBackgroundDrawable)
+        }else{
+            dayLabel.setDayColors(labelColor)
+            dayLabel.setBackgroundDrawable(calendarDayBackgroundDrawable)
+        }
     } else {
-        dayLabel.setDayColors(labelColor, backgroundRes = R.drawable.background_transparent)
+        if(calendar.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY){
+            dayLabel.setDayColors(Color.parseColor("#d6222b"), backgroundRes = R.drawable.background_transparent)
+        }else{
+            dayLabel.setDayColors(labelColor, backgroundRes = R.drawable.background_transparent)
+        }
     }
 }
 
