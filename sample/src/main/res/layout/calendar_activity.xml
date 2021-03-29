@@ -4,9 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.applandeo.materialcalendarsampleapp.MainActivity">
+    tools:context="com.lovely.materialcalendarsampleapp.MainActivity">
 
-    <com.applandeo.materialcalendarview.CalendarView
+    <com.lovely.calendarview.CalendarView
         android:id="@+id/calendarView"
         android:layout_width="match_parent"
         android:layout_height="0dp"

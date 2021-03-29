@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.applandeo.materialcalendarsampleapp">
+    package="com.lovely.materialcalendarsampleapp">
 
     <application
         android:allowBackup="false"
@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.lovely.materialcalendarsampleapp.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -17,24 +17,24 @@
         </activity>
 
         <activity
-            android:name=".CalendarActivity"
+            android:name="com.lovely.materialcalendarsampleapp.CalendarActivity"
             android:label="Standard calendar" />
 
         <activity
-            android:name=".CalendarWithCustomRowActivity"
+            android:name="com.lovely.materialcalendarsampleapp.CalendarWithCustomRowActivity"
             android:screenOrientation="landscape"
             android:label="Standard calendar with custom row" />
 
         <activity
-            android:name=".OneDayPickerActivity"
+            android:name="com.lovely.materialcalendarsampleapp.OneDayPickerActivity"
             android:label="One day picker" />
 
         <activity
-            android:name=".ManyDaysPickerActivity"
+            android:name="com.lovely.materialcalendarsampleapp.ManyDaysPickerActivity"
             android:label="Many days picker" />
 
         <activity
-            android:name=".RangePickerActivity"
+            android:name="com.lovely.materialcalendarsampleapp.RangePickerActivity"
             android:label="Range picker" />
     </application>
 
