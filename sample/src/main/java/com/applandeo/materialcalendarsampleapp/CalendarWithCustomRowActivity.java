@@ -10,8 +10,10 @@ import com.applandeo.materialcalendarview.CalendarView;
 import com.applandeo.materialcalendarview.CalendarWeekDay;
 import com.applandeo.materialcalendarview.EventDay;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 public class CalendarWithCustomRowActivity extends AppCompatActivity {
@@ -20,11 +22,11 @@ public class CalendarWithCustomRowActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calendar_with_custom_row_activity);
-
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         List<EventDay> events = new ArrayList<>();
 
         Calendar calendar1 = Calendar.getInstance();
-        calendar1.add(Calendar.DAY_OF_MONTH, 10);
+        calendar1.add(Calendar.DATE, 5);
         events.add(new EventDay(calendar1, R.drawable.sample_icon_2));
 
         Calendar calendar2 = Calendar.getInstance();
