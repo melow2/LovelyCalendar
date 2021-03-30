@@ -150,6 +150,14 @@ class CalendarView @JvmOverloads constructor(
         rootView.setAbbreviationsLabels(abbreviationsLabelsColor, firstDayOfWeek)
     }
 
+    fun setDayLabelSize(size:Float) = with(calendarPageAdapter){
+        rootView.setDayLabelSize(size)
+    }
+
+    fun setHeaderLabelSize(size:Float) = with(calendarPageAdapter){
+        rootView.setHeaderLabelSize(size)
+    }
+
     fun setHeaderColor(@ColorRes color: Int) = with(calendarProperties) {
         headerColor = color
         rootView.setHeaderColor(headerColor)
