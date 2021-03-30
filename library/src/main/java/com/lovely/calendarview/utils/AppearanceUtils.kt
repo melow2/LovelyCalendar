@@ -41,9 +41,19 @@ internal fun View.setTypeface(typeface: Typeface?) {
     }
 }
 
+internal fun View.setDayLabelSize(size: Float) {
+    getAbbreviationsTextViews().forEach { label ->
+        label.textSize = size
+    }
+}
+
 internal fun View.setHeaderColor(color: Int) {
     if (color == 0) return
     this.calendarHeader.setBackgroundColor(color)
+}
+
+internal fun View.setHeaderLabelSize(size: Float) {
+    this.currentDateLabel.textSize = size
 }
 
 internal fun View.setHeaderLabelColor(color: Int) {

@@ -139,7 +139,6 @@ class CalendarView @JvmOverloads constructor(
             rootView.setForwardButtonImage(forwardButtonSrc)
             calendarViewPager.swipeEnabled = swipeEnabled
         }
-
         setCalendarRowLayout()
     }
 
