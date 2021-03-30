@@ -50,7 +50,7 @@ class CalendarView @JvmOverloads constructor(
 ) : LinearLayout(context, attrs, defStyleAttr) {
 
     private lateinit var calendarPageAdapter: CalendarPageAdapter
-    private lateinit var calendarProperties: CalendarProperties
+    lateinit var calendarProperties: CalendarProperties
 
     private var currentPage: Int = 0
 
