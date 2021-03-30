@@ -183,6 +183,10 @@ class CalendarView @JvmOverloads constructor(
         rootView.setPreviousButtonImage(previousButtonSrc)
     }
 
+    fun setHeaderLabelMargin(left: Int = 0, top: Int = 0, right: Int = 0, bottom: Int = 0){
+        rootView.seHeaderLabelMargin(left,top,right,bottom)
+    }
+
     fun setForwardButtonImage(drawable: Drawable) = with(calendarProperties) {
         forwardButtonSrc = drawable
         rootView.setForwardButtonImage(forwardButtonSrc)

@@ -3,6 +3,7 @@ package com.lovely.calendarview.utils
 import android.graphics.Typeface
 import android.graphics.drawable.Drawable
 import android.view.View
+import android.view.ViewGroup
 import com.lovely.calendarview.R
 import kotlinx.android.synthetic.main.calendar_view.view.*
 
@@ -97,4 +98,12 @@ internal fun View.setNavigationVisibility(visibility: Int) {
 
 internal fun View.setAbbreviationsBarVisibility(visibility: Int) {
     this.abbreviationsBar.visibility = visibility
+}
+
+internal fun View.seHeaderLabelMargin(left: Int, top: Int, right: Int, bottom: Int) {
+    if (layoutParams is ViewGroup.MarginLayoutParams) {
+        val p = layoutParams as ViewGroup.MarginLayoutParams
+        p.setMargins(left, top, right, bottom)
+        requestLayout()
+    }
 }
