@@ -101,9 +101,10 @@ internal fun View.setAbbreviationsBarVisibility(visibility: Int) {
 }
 
 internal fun View.seHeaderLabelMargin(left: Int, top: Int, right: Int, bottom: Int) {
-    if (layoutParams is ViewGroup.MarginLayoutParams) {
-        val p = layoutParams as ViewGroup.MarginLayoutParams
+    val view = this.headerLabel
+    if (view.layoutParams is ViewGroup.MarginLayoutParams) {
+        val p = view.layoutParams as ViewGroup.MarginLayoutParams
         p.setMargins(left, top, right, bottom)
-        requestLayout()
+        view.requestLayout()
     }
 }
