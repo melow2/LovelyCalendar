@@ -26,6 +26,8 @@ class CalendarProperties(private val context: Context) {
 
     var calendarType: Int = CLASSIC
 
+    var dayLabelSize:Float = 0F
+
     var headerColor: Int = 0
         get() = if (field <= 0) field else context.parseColor(field)
 

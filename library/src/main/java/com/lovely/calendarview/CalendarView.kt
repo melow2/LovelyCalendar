@@ -90,6 +90,7 @@ class CalendarView @JvmOverloads constructor(
         }
     }
 
+
     private fun initCalendarProperties(typedArray: TypedArray) = with(calendarProperties) {
         headerColor = typedArray.getColor(R.styleable.CalendarView_headerColor, 0)
         headerLabelColor = typedArray.getColor(R.styleable.CalendarView_headerLabelColor, 0)
@@ -150,17 +151,23 @@ class CalendarView @JvmOverloads constructor(
         rootView.setAbbreviationsLabels(abbreviationsLabelsColor, firstDayOfWeek)
     }
 
-    fun setDayLabelSize(size:Float) = with(calendarPageAdapter){
+    fun setDayLabelSize(size: Float) = with(calendarPageAdapter) {
         rootView.setDayLabelSize(size)
     }
 
-    fun setHeaderLabelSize(size:Float) = with(calendarPageAdapter){
+    fun setHeaderLabelSize(size: Float) = with(calendarPageAdapter) {
         rootView.setHeaderLabelSize(size)
     }
 
     fun setHeaderColor(@ColorRes color: Int) = with(calendarProperties) {
         headerColor = color
         rootView.setHeaderColor(headerColor)
+    }
+
+    fun setToDayLabelSize(size: Float) {
+        with(calendarProperties) {
+            dayLabelSize = size
+        }
     }
 
     fun setHeaderVisibility(visibility: Int) = with(calendarProperties) {
@@ -183,8 +190,8 @@ class CalendarView @JvmOverloads constructor(
         rootView.setPreviousButtonImage(previousButtonSrc)
     }
 
-    fun setHeaderLabelMargin(left: Int = 0, top: Int = 0, right: Int = 0, bottom: Int = 0){
-        rootView.seHeaderLabelMargin(left,top,right,bottom)
+    fun setHeaderLabelMargin(left: Int = 0, top: Int = 0, right: Int = 0, bottom: Int = 0) {
+        rootView.seHeaderLabelMargin(left, top, right, bottom)
     }
 
     fun setForwardButtonImage(drawable: Drawable) = with(calendarProperties) {

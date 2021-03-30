@@ -46,7 +46,7 @@ class CalendarDayAdapter(
         setLabelColors(dayLabel, day)
         dayLabel.typeface = calendarProperties.typeface
         dayLabel.text = day[Calendar.DAY_OF_MONTH].toString()
-
+        dayLabel.textSize = calendarProperties.dayLabelSize
         return dayView
     }
 
